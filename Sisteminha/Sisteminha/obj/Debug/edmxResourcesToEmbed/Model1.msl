@@ -4,13 +4,14 @@
     <EntitySetMapping Name="cadastro">
       <EntityTypeMapping TypeName="SisteminhaModel.cadastro">
         <MappingFragment StoreEntitySet="cadastro">
-          <ScalarProperty Name="nomeid" ColumnName="nomeid" />
-          <ScalarProperty Name="nome" ColumnName="nome" />
-          <ScalarProperty Name="sobrenome" ColumnName="sobrenome" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
           <ScalarProperty Name="sexo" ColumnName="sexo" />
-          <ScalarProperty Name="telefone" ColumnName="telefone" />
-          <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="dataNasc" ColumnName="dataNasc" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="sobrenome" ColumnName="sobrenome" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="nomeid" ColumnName="nomeid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

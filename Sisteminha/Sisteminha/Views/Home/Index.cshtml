@@ -1,49 +1,34 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<h1> Página teste</h1>
-<form action="@Url.Action("Index")" method="POST" >
-    <div style="text-align: left">
-        <div>
-            <label>Nome:</label> <br> <input id="txtnome" name="nome"  type="text" placeholder="Digite aqui"> <br />
-            <hr>
-        </div>
-        <div>
-            <label>Sobrenome:</label> <br> <input id="txtsobrenome" name="sobrenome"  type="text" placeholder="Digite aqui "> <br />
-        </div>
-        <div>
-            <label>Data de Nascimento:</label> <br> <input id="txtdatanascimento" name="datanascimento"  required class="maskdate" type="text" placeholder="DD/MM/AAAA"> <br />
-            <hr>
-        </div>
-        <div>
-            <Label>Sexo: </Label>
-            <br>
-            <input name="sexo" type="radio">Masculino
-            <input name="sexo" type="radio">Feminimo
-        </div>
-        <br>
+<script type="text/javascript">
+    function valida() {
+        alert("Dados cadastrados com sucesso");
+    }
+</script>
 
-        <div>
-            <label>Telefone</label> <br> <input id="txtfone" name="fone"  class="maskphone" type="text" placeholder="(99) 99999-9999">
+<h1> Tela de Login</h1>
 
-        </div>
-
+<form action="@Url.Action("Index")" method="POST">
+    <div style="text-align: center">
         <div>
             <br />
             <label>Email:</label> <br> <input id="txtemail" name="email" placeholder="exemplo@mail.com.br">
         </div>
         <br>
+
         <div>
-            <button type="submit">Cadastrar </button>
+            <br />
+            <label>Senha:</label> <br> <input type="password" id="txtsenha" name="Senha" placeholder="digite sua senha aqui...">
+        </div>
+        <br>
+
+        <div> 
+            <button onclick="valida();" type="submit">Entrar </button>
 
         </div>
     </div>
 
 </form>
 
-<script>
 
-    $(document).ready(function () {
-        $('.maskphone').mask('(00) 00000-0000');
-    });
-</script>

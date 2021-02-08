@@ -7,10 +7,11 @@
     <Property Name="nomeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nome" Type="varchar" MaxLength="500" />
     <Property Name="sobrenome" Type="varchar" MaxLength="500" />
-    <Property Name="sexo" Type="int" />
     <Property Name="telefone" Type="varchar" MaxLength="500" />
     <Property Name="email" Type="varchar" MaxLength="500" />
     <Property Name="dataNasc" Type="datetime" />
+    <Property Name="sexo" Type="char" MaxLength="1" />
+    <Property Name="senha" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityContainer Name="SisteminhaModelStoreContainer">
     <EntitySet Name="cadastro" EntityType="Self.cadastro" Schema="dbo" store:Type="Tables" />

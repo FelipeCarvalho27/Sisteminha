@@ -17,9 +17,10 @@ namespace Sisteminha
         public int nomeid { get; set; }
         public string nome { get; set; }
         public string sobrenome { get; set; }
-        public Nullable<int> sexo { get; set; }
         public string telefone { get; set; }
         public string email { get; set; }
         public Nullable<System.DateTime> dataNasc { get; set; }
+        public string sexo { get; set; }
+        public string senha { get; set; }
     }
 }

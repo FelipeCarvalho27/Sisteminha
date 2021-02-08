@@ -8,7 +8,7 @@ namespace Sisteminha.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly  SisteminhaEntities db;
+        private readonly SisteminhaEntities db;
         public HomeController()
         {
             db = new SisteminhaEntities();
@@ -21,7 +21,37 @@ namespace Sisteminha.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(string nome, string sobrenome, string datanascimento, string fone, string email)
+        public ActionResult Index(string email, string Senha)
+        {
+            //string hash = Utis.sha256(senha);
+            try
+            {
+                var cadastro = db.cadastro.Where(x => x.email == email && x.senha == Senha).FirstOrDefault();
+                if (cadastro.senha != string.Empty)
+                {
+       
+                    return RedirectToAction("about");
+                }
+
+                else
+                    return RedirectToAction("Index");
+
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult cadastrousers()
+        {
+            return View();
+        }
+
+
+
+        [HttpPost]
+        public ActionResult cadastrousers(string nome, string sobrenome, string datanascimento, string fone, string email, string sexo)
         {
             cadastro Novo = new cadastro();
             Novo.nome = nome;
@@ -29,6 +59,7 @@ namespace Sisteminha.Controllers
             Novo.dataNasc = Convert.ToDateTime(datanascimento);
             Novo.telefone = fone;
             Novo.email = email;
+            Novo.sexo = sexo;
             db.cadastro.Add(Novo);
             db.SaveChanges();
 
