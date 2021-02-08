@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title> Página teste</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style rel="stylesheet">
+            body{
+                background-color:lightyellow;
+            }
+        </style>
+        <script type="text/javascript">
+        function valida (){
+            alert ("Dados cadastrados com sucesso");
+        }
+            
+        </script>
+    </head>
+
+
+        <body>  
+                <h1> Página teste</h1>
+                <form id="meuformulario"> 
+                    <div style="text-align: left"> 
+                    <div>
+                        <label>Nome:</label> <br> <input type="text" placeholder="Digite aqui" > <br/>
+                        <hr>
+                    </div>
+                    <div>
+                        <label>Sobrenome:</label> <br> <input type="text" placeholder="Digite aqui "> <br/>
+                    </div>
+                    <div>
+                        <label>Data de Nascimento:</label> <br> <input required class="maskdate" type="text" placeholder="DD/MM/AAAA" > <br/>
+                        <hr>
+                    </div>
+                        <div>
+                            <Label>Sexo: </Label>
+                            <br>
+                            <input  name="sexo" type="radio" >Masculino
+                            <input  name="sexo" type="radio" >Feminimo 
+                    </div>
+                        <br>
+
+                    <div>
+                         <label>Telefone</label> <br> <input  class ="maskphone" type ="text" placeholder = "(99) 99999-9999"  >
+
+                    </div>
+
+                    <div>   
+                        <br/>
+                        <label>Email:</label> <br> <input  placeholder="exemplo@mail.com.br" >
+                    </div>
+                    <br>
+                    <div>
+                        <button onclick="valida();" type="submit" >Cadastrar </button>
+
+                    </div>
+                </div>
+                    
+                </form>
+                <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+                <script src="jquery.mask.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        $('#meuformulario').validate({
+                            submitHandler: function(form) {
+                                // some other code
+                                // maybe disabling submit button
+                                // then:
+                                //$(form).submit();  
+                                alert('Cadastro efetuado com sucesso');
+                            }
+                        });
+                        $('.maskdate').mask('00/00/0000');
+                    });
+
+            
+
+
+                </script>
+
+                    <script> 
+                    $(document).ready(function(){
+                    $('.maskphone').mask('(00) 00000-0000');});
+                    </script>
+                    
+        </body>
+</html>
