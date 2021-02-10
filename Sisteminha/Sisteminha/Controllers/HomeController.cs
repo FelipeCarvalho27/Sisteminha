@@ -27,9 +27,10 @@ namespace Sisteminha.Controllers
             try
             {
                 var cadastro = db.cadastro.Where(x => x.email == email && x.senha == Senha).FirstOrDefault();
+                cadastro.senha = cadastro.senha == null ? "" : cadastro.senha;
                 if (cadastro.senha != string.Empty)
                 {
-       
+
                     return RedirectToAction("about");
                 }
 
@@ -51,7 +52,7 @@ namespace Sisteminha.Controllers
 
 
         [HttpPost]
-        public ActionResult cadastrousers(string nome, string sobrenome, string datanascimento, string fone, string email, string sexo)
+        public ActionResult cadastrousers(string nome, string sobrenome, string datanascimento, string fone, string email, string sexo, string senha)
         {
             cadastro Novo = new cadastro();
             Novo.nome = nome;
@@ -60,6 +61,7 @@ namespace Sisteminha.Controllers
             Novo.telefone = fone;
             Novo.email = email;
             Novo.sexo = sexo;
+            Novo.senha = senha;
             db.cadastro.Add(Novo);
             db.SaveChanges();
 
