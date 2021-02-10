@@ -1,59 +1,71 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="row">
-    <h1> Página teste</h1>
-
-</div>
-<form action="@Url.Action("cadastrousers")" method="POST">
+<div class="card" style="border-radius:15px;">
     <div class="row">
-        <div class="col-6">
-            <div class="form-group">
-                <label for="txtnome">Nome:</label>
-                <input required class="form-control" id="txtnome" name="nome" type="text" placeholder="Digite aqui">
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="form-group">
-                <label for="txtsobrenome">Sobrenome:</label>
-                <input required class="form-control" id="txtsobrenome" name="sobrenome" type="text" placeholder="Digite aqui ">
-            </div>
+        <div style="text-align:center;">
+            <h3> Página de Cadastro de novos usuários</h3>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-6">
-            <div class="form-group">
-                <label>Data de Nascimento:</label> <input required class="form-control maskdate" id="txtdatanascimento" name="datanascimento"  type="text" placeholder="DD/MM/AAAA">
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="form-group">
-
-                <div class="custom-control custom-radio">
-                    <fieldset>
-                        <Label for="txtsexo">Sexo: </Label> <br>
-                        <input required id="txtsexo" class="custom-control-input" name="sexo" value="M" type="radio" />Masculino
-                        <input required id="txtsexo" class="custom-control-input" name="sexo" value="F" type="radio" />Feminimo
-                    </fieldset>
+    <form action="@Url.Action("cadastrousers")" method="POST">
+        <div style="padding:15px;">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="txtnome"><b>Nome:</b></label>
+                        <input required class="form-control" id="txtnome" name="nome" type="text" placeholder="Digite aqui">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="txtsobrenome"><b>Sobrenome:</b></label>
+                        <input required class="form-control" id="txtsobrenome" name="sobrenome" type="text" placeholder="Digite aqui ">
+                    </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label><b>Data de Nascimento:</b></label> <input required class="form-control maskdate" id="txtdatanascimento" name="datanascimento" type="text" placeholder="DD/MM/AAAA">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+
+                        <div class="custom-control custom-radio">
+                            <fieldset>
+                                <Label for="txtsexo"><b>Sexo:</b> </Label> <br>
+                                <input required id="txtsexo" class="custom-control-input" name="sexo" value="M" type="radio" />Masculino
+                                <input required id="txtsexo" class="custom-control-input" name="sexo" value="F" type="radio" />Feminimo
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label><b>Telefone:</b></label>  <input required class="form-control maskphone" id="txtfone" name="fone" type="text" placeholder="(99) 99999-9999">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label><b>Email:</b></label>  <input required class="form-control" id="txtemail" name="email" placeholder="exemplo@mail.com.br">
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <label><b>Senha:</b></label> <input required class="form-control" type="password" style="width:250px" id="txtsenha" name="Senha" placeholder="Digite sua senha aqui...">
+            </div>
+            <br />
+            <div style="text-align:left;">
+                <button class="btn btn-primary btn-block" type="submit">Cadastrar </button>
+            </div>
         </div>
-    </div>
-    <div>
-        <label>Telefone</label>  <input required class="form-control maskphone" id="txtfone" name="fone" type="text" placeholder="(99) 99999-9999">
-    </div>
-    <div>
-        <label>Email:</label>  <input required class="form-control" id="txtemail" name="email" placeholder="exemplo@mail.com.br">
-    </div>
-    <div>
-        <label>Senha:</label> <input required class="form-control" type="password" id="txtsenha" name="Senha">
-    </div>
-    <br />
-    <div>
-        <button class="btn btn-primary btn-block" type="submit">Cadastrar </button>
-    </div>
-</form>
+    </form>
+</div>
 
 
