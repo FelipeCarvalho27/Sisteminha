@@ -11,13 +11,13 @@
         <div class="col-6">
             <div class="form-group">
                 <label for="txtnome">Nome:</label>
-                <input class="form-control" id="txtnome" name="nome" type="text" placeholder="Digite aqui">
+                <input required class="form-control" id="txtnome" name="nome" type="text" placeholder="Digite aqui">
             </div>
         </div>
         <div class="col-6">
             <div class="form-group">
                 <label for="txtsobrenome">Sobrenome:</label>
-                <input class="form-control" id="txtsobrenome" name="sobrenome" type="text" placeholder="Digite aqui ">
+                <input required class="form-control" id="txtsobrenome" name="sobrenome" type="text" placeholder="Digite aqui ">
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col-6">
             <div class="form-group">
-                <label>Data de Nascimento:</label> <input class="form-control" id="txtdatanascimento" name="datanascimento" required class="maskdate" type="text" placeholder="DD/MM/AAAA">
+                <label>Data de Nascimento:</label> <input required class="form-control maskdate" id="txtdatanascimento" name="datanascimento"  type="text" placeholder="DD/MM/AAAA">
             </div>
         </div>
         <div class="col-6">
@@ -34,26 +34,25 @@
                 <div class="custom-control custom-radio">
                     <fieldset>
                         <Label for="txtsexo">Sexo: </Label> <br>
-                        <input id="txtsexo" class="custom-control-input" name="sexo" value="M" type="radio" />Masculino
-                        <input id="txtsexo" class="custom-control-input" name="sexo" valeu="F" type="radio" />Feminimo
+                        <input required id="txtsexo" class="custom-control-input" name="sexo" value="M" type="radio" />Masculino
+                        <input required id="txtsexo" class="custom-control-input" name="sexo" value="F" type="radio" />Feminimo
                     </fieldset>
                 </div>
             </div>
         </div>
     </div>
     <div>
-        <label>Telefone</label>  <input class="form-control maskphone" id="txtfone" name="fone" type="text" placeholder="(99) 99999-9999">
+        <label>Telefone</label>  <input required class="form-control maskphone" id="txtfone" name="fone" type="text" placeholder="(99) 99999-9999">
     </div>
     <div>
-        <label>Email:</label>  <input class="form-control" id="txtemail" name="email" placeholder="exemplo@mail.com.br">
+        <label>Email:</label>  <input required class="form-control" id="txtemail" name="email" placeholder="exemplo@mail.com.br">
     </div>
     <div>
-        <label>Senha:</label> <input class="form-control" type="password" id="txtsenha" name="Senha">
+        <label>Senha:</label> <input required class="form-control" type="password" id="txtsenha" name="Senha">
     </div>
     <br />
     <div>
         <button class="btn btn-primary btn-block" type="submit">Cadastrar </button>
-
     </div>
 </form>
 
