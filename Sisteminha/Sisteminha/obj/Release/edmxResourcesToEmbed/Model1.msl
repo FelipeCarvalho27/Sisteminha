@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SisteminhaModelStoreContainer" CdmEntityContainer="SisteminhaEntities">
+    <EntitySetMapping Name="cadastro">
+      <EntityTypeMapping TypeName="SisteminhaModel.cadastro">
+        <MappingFragment StoreEntitySet="cadastro">
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="dataNasc" ColumnName="dataNasc" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="sobrenome" ColumnName="sobrenome" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="nomeid" ColumnName="nomeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

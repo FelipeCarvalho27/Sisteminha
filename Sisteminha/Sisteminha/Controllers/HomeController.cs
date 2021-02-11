@@ -31,7 +31,7 @@ namespace Sisteminha.Controllers
                 if (cadastro.senha != string.Empty)
                 {
 
-                    return RedirectToAction("about");
+                    return RedirectToAction("Menu");
                 }
 
                 else
@@ -49,6 +49,10 @@ namespace Sisteminha.Controllers
             return View();
         }
 
+        public ActionResult Menu()
+        {
+            return View();
+        }
 
 
         [HttpPost]
